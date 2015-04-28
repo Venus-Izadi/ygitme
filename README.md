@@ -16,8 +16,3 @@ Ygitme is a git commands-challenger
 2. Run the tests:
 		rake test
 3. rake install
-
-## Publishing
-1. Bump the lib/ygitme/version.rb
-2. gem build
-3. gem publish ygitme-...
