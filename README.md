@@ -5,7 +5,7 @@ Ygitme is a git commands-challenger
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/ygitme/fork )
+1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -13,7 +13,9 @@ Ygitme is a git commands-challenger
 
 ## Developing
 1. Change stuff, write some tests
-2. rake install
+2. Run the tests:
+		rake test
+3. rake install
 
 ## Publishing
 1. Bump the lib/ygitme/version.rb
