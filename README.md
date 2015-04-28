@@ -1,3 +1,4 @@
+[![Build Status](https://api.travis-ci.org/Svetixbot/ygitme.svg?branch=master)](https://travis-ci.org/Svetixbot/ygitme)
 # Ygitme
 
 Ygitme is a git commands-challenger
