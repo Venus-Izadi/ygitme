@@ -1,11 +1,3 @@
 language: ruby
 rvm:
 - 2.1.1
-deploy:
-  provider: rubygems
-  api_key:
-    secure: O4+wHaMX7I7w++tGeLWTRm+hG9c339zI9Gcs7AMu+FA1ugM1VJrkvhJeGelL6uTY4RDkhgeEkqeod67IdD+beH0FDgxui0kDjFCISjP4NBnjiVjgOoU4nWD4NcE82YG6f2mj0M+0o6uGidRF/9kznyhtNVsglwS2dJ7AjPgEPe8=
-  gem: ygitme
-  on:
-    tags: true
-    repo: Svetixbot/ygitme
