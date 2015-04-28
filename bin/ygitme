@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'ygitme'
+
+hello = Ygitme::Hello.new  
+hello.say_hello 
