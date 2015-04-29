@@ -6,12 +6,27 @@ module Ygitme
       gitStatus
       gitCommit
       gitLog
+      gitBranch
     end
 
     def gitLog
       puts 'Y git me a log of previous commits'
       blah = gets.chomp
       if assert(blah, "git log")
+        puts 'Yahoo, you are right!'
+      else
+        puts 'Y need to git MOAR!'
+      end
+    end
+
+    def assert(input, expected)
+      return input == expected
+    end
+
+    def gitBranch
+      puts 'Y git me a list of branches'
+      blah = gets.chomp
+      if assert(blah, "git branch")
         puts 'Yahoo, you are right!'
       else
         puts 'Y need to git MOAR!'
