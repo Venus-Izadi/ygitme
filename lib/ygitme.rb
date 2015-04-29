@@ -5,6 +5,21 @@ module Ygitme
     def gitme
       gitStatus
       gitCommit
+      gitLog
+    end
+
+    def gitLog
+      puts 'Y git me a log of previous commits'
+      blah = gets.chomp
+      if assert(blah, "git log")
+        puts 'Yahoo, you are right!'
+      else
+        puts 'Y need to git MOAR!'
+      end
+    end
+
+    def assert(input, expected)
+      return input == expected
     end
 
     def gitStatus
