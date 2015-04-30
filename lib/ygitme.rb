@@ -57,5 +57,15 @@ module Ygitme
       end
     end
 
+    def gitVersion
+      puts 'Y git me a version of your git'
+      gitVersion = gets.chomp
+      if (gitVersion == 'git version' || gitVersion == 'git --version')
+        puts 'Yahoo, you are right!'
+      else
+        puts 'Y need to git MOAR!'
+      end
+    end
+
   end
 end  
