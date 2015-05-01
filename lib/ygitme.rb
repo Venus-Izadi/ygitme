@@ -3,67 +3,71 @@ require "ygitme/version"
 module Ygitme  
   class Challenge
     def gitme
-      gitStatus
-      gitCommit
-      gitLog
-      gitBranch
-    end
 
-    def gitLog
-      puts 'Y git me a log of previous commits'
-      blah = gets.chomp
-      if assert(blah, "git log")
-        puts 'Yahoo, you are right!'
-      else
-        puts 'Y need to git MOAR!'
-      end
-    end
+      userInput = getInput('Y git me list of git logs')
+      puts gitLog(userInput)
 
-    def assert(input, expected)
-      return input == expected
-    end
+      userInput = getInput('Y git me a status of things')
+      puts gitStatus(userInput)
 
-    def gitBranch
-      puts 'Y git me a list of branches'
-      blah = gets.chomp
-      if assert(blah, "git branch")
-        puts 'Yahoo, you are right!'
-      else
-        puts 'Y need to git MOAR!'
-      end
+      userInput = getInput('Y git me how to commit')
+      puts gitStatus(userInput)
+
+      userInput = getInput('Y git me a list of branches')
+      puts gitCommit(userInput)
+
+      userInput = gitVerison('Y git me a version of your git')
+      puts gitVerison(userInput)
+    end
+    
+    def getInput(displayMessage)
+      puts displayMessage
+      input = gets.chomp
     end
 
     def assert(input, expected)
       return input == expected
     end
 
-    def gitStatus
-      puts 'Y git me a status of things'
-      gitStatus = gets.chomp
-      if (gitStatus == 'git status')
-        puts 'Yahoo, you are right!'
+    def gitLog(input)
+      if assert(input, "git log")
+         'Yes'
       else
-        puts 'Y need to git MOAR!'
+         'No'
       end
     end
 
-    def gitCommit
-      puts 'Y git me a commit command'
-      gitCommit = gets.chomp
-      if (gitCommit == 'git commit -m ""')
-        puts 'Yahoo, you are right!'
+    def gitStatus(input)
+      if assert(input, 'git status')
+        'Yes'
       else
-        puts 'Y need to git MOAR!'
+        'No'
       end
     end
 
-    def gitVersion
-      puts 'Y git me a version of your git'
-      gitVersion = gets.chomp
-      if (gitVersion == 'git version' || gitVersion == 'git --version')
-        puts 'Yahoo, you are right!'
+    def gitCommit(input)
+      if assert(input,'git commit -m')
+        'Yes'
       else
-        puts 'Y need to git MOAR!'
+        'No'
+      end
+    end
+
+
+    def gitBranch(input)
+      if assert(input, "git branch")
+        'Yes'
+      else
+        'No'
+      end
+    end
+
+    
+    def gitVersion(input)
+      if assert(input,'git version')
+        'Yes'
+      else
+        'No'
       end
     end
 
