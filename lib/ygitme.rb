@@ -11,10 +11,10 @@ module Ygitme
       puts gitStatus(userInput)
 
       userInput = getInput('Y git me how to commit')
-      puts gitStatus(userInput)
+      puts gitCommit(userInput)
 
       userInput = getInput('Y git me a list of branches')
-      puts gitCommit(userInput)
+      puts gitBranch(userInput)
 
       userInput = gitVerison('Y git me a version of your git')
       puts gitVerison(userInput)

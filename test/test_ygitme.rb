@@ -27,59 +27,59 @@ end
 
 describe "#testing Git Status" do
     it "Checks if it accepts correct input for Git Status command" do
-      mockInputText = 'git status'
-      expectedOutput = @Challenge.gitStatus(mockInputText)
-      expectedOutput.must_equal 'Yes'
+      correctMockInput = 'git status'
+      actualOutput = @Challenge.gitStatus(correctMockInput)
+      actualOutput.must_equal 'Yes'
     end
 
     it "Checks if it rejects incorrect input for Git Status command" do
-      mockInputText = 'git incorrect'
-      expectedOutput = @Challenge.gitStatus(mockInputText)
-      expectedOutput.must_equal 'No'
+      incorrectMockInput = 'git incorrect'
+      actualOutput = @Challenge.gitStatus(incorrectMockInput)
+      actualOutput.must_equal 'No'
     end
 
   end
 
 describe "#testing Git Commit" do
     it "Checks if it accepts correct input for Git Commit command" do
-      mockInputText = 'git commit -m'
-      expectedOutput = @Challenge.gitCommit(mockInputText)
-      expectedOutput.must_equal 'Yes'
+      correctMockInput = 'git commit -m'
+      actualOutput = @Challenge.gitCommit(correctMockInput)
+      actualOutput.must_equal 'Yes'
     end
 
     it "Checks if it rejects incorrect input for Git Commit command" do
-      mockInputText = 'git incorrect'
-      expectedOutput = @Challenge.gitCommit(mockInputText)
-      expectedOutput.must_equal 'No'
+      incorrectMockInput = 'git incorrect'
+      actualOutput = @Challenge.gitCommit(incorrectMockInput)
+      actualOutput.must_equal 'No'
     end
   end
 
 describe "#testing Git Branch" do
     it "Checks if it accepts correct input for Git Branch command" do
-      mockInputText = 'git branch'
-      expectedOutput = @Challenge.gitBranch(mockInputText)
-      expectedOutput.must_equal 'Yes'
+      correctMockInput = 'git branch'
+      actualOutput = @Challenge.gitBranch(correctMockInput)
+      actualOutput.must_equal 'Yes'
     end
 
     it "Checks if it rejects incorrect input for Git Branch command" do
-      mockInputText = 'git incorrect'
-      expectedOutput = @Challenge.gitBranch(mockInputText)
-      expectedOutput.must_equal 'No'
+      incorrectMockInput = 'git incorrect'
+      actualOutput = @Challenge.gitBranch(incorrectMockInput)
+      actualOutput.must_equal 'No'
     end
     		
   end
 
-describe "#testing Git Branch" do
+describe "#testing Git Version" do
     it "Checks if it accepts correct input for Git Version command" do
-      mockInputText = 'git version'
-      expectedOutput = @Challenge.gitVersion(mockInputText)
-      expectedOutput.must_equal 'Yes'
+      correctMockInput = 'git version'
+      actualOutput = @Challenge.gitVersion(correctMockInput)
+      actualOutput.must_equal 'Yes'
     end
 
     it "Checks if it rejects incorrect input for Git Version command" do
-      mockInputText = 'git incorrect'
-      expectedOutput = @Challenge.gitVersion(mockInputText)
-      expectedOutput.must_equal 'No'
+      incorrectMockInput = 'git incorrect'
+      actualOutput = @Challenge.gitVersion(incorrectMockInput)
+      actualOutput.must_equal 'No'
     end
     		
   end
